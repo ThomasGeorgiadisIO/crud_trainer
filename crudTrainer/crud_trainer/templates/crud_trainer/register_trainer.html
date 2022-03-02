@@ -1,0 +1,11 @@
+{% extends 'crud_trainer/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-success rounded-pill"><i class="fa-solid fa-floppy-disk"></i></button>
+    <a href="{% url 'trainer_list' %}" class="btn btn-info rounded-pill"><i class="fa-solid fa-database"></i></a>
+</form>
+{% endblock content %}
